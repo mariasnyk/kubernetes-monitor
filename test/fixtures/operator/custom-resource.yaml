@@ -7,5 +7,8 @@ spec:
   integrationApi: https://kubernetes-upstream.dev.snyk.io
   clusterName: My dev clusterName
   pvc:
-    enabled: true
+    enabled: false
     name: snyk-monitor-pvc
+  initContainerImage:
+    repository: busybox
+    tag: latest
