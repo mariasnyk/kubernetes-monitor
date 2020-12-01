@@ -1,0 +1,9 @@
+# Build the manager binary
+FROM quay.io/operator-framework/helm-operator:v1.1.0
+
+ENV HOME=/opt/helm
+
+COPY LICENSE /licenses/LICENSE
+COPY watches.yaml ${HOME}/watches.yaml
+COPY helm-charts  ${HOME}/helm-charts
+WORKDIR ${HOME}

@@ -1,0 +1,14 @@
+apiVersion: charts.snyk.io/v1alpha1
+kind: SnykMonitor
+metadata:
+  name: snyk-monitor
+spec:
+  clusterName: ''
+  image:
+    pullPolicy: Always
+    repository: snyk/kubernetes-monitor
+    tag: 1.37.2
+  integrationApi: ''
+  monitorSecrets: snyk-monitor
+  scope: Cluster
+  temporaryStorageSize: 50Gi
